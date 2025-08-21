@@ -7,8 +7,7 @@ box-sizing: border-box;
 header {
 width: 100%;
 padding: 20px 8%;
-background-color:black;
-}
+background: url(https://www.mpsnet.net/Portal/Bizarro/biz056-01.jpg)
 
 #logo {
 font-size: 1.5rem;
