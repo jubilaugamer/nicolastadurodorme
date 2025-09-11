@@ -58,3 +58,25 @@ display: flex;
 .titulocor {
     color: blanchedalmond;
 }
+.titulocolor {
+
+color: blue;
+
+}
+
+.menu-toggle{
+display: none;
+flex-direction: column;
+cursor: pointer
+background: none;
+padding: 5px;
+}
+.menu-toggle span {
+width: 25px;
+heigth:3px
+
+
+
+
+
+}
