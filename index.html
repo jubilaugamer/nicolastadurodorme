@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>jobs de graça</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>maravilha sound</title>
 </head>
+
 <body>
-    <header class="cabecario">
-        <i class="fa-brands fa-accessible-icon">blue</i>
-    <nav class="navbar">
-<ul class="nav_lista">
-    <li class="nav_item">funk</li>
-    <li class="nav_item">sertanejo</li>
-    <li class="nav_item">pagode</li>
-        
+    <header class="cabecalho">
+        <nav class="navbar">
+            <i class="fa-solid fa-music" id="logo"> Maravilha</i>
+            <!-- Menu Hamrburguer para mobile!-->
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav_lista">
+                <li class="nav_item">Rock</li>
+                <li class="nav_item">Samba</li>
+                <li class="nav_item">Pagode</li>
+            </ul>
 
 
 
+        </nav>
 
 
-
-</ul>
-
-
-
-    </nav>
     </header>
-<main class="conteudo">
-<section class="home">
-    <h1 class="titulo">
-        joseph  <span class="titulocor">camolle</span> pro player.
-    </h1>
-</section>
-</main>
+
+    <main class="conteudo">
+        <section class="home">
+            <h1 class="titulo">
+                A melhor seleção de <span class="titulocor">músicas</span> de Maravilha
+            </h1>
+        </section>
+    </main>
+<script>
+        // JavaScript para controlar o menu hambúrguer
+        const menuToggle = document.getElementById('menuToggle');
+        const navLista = document.getElementById('navLista');
+        
+        menuToggle.addEventListener('click', function() {
+            navLista.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+        
+        // Fechar menu ao clicar em um item
+        const navItems = document.querySelectorAll('.nav_item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navLista.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
