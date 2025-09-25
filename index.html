@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Músicas</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="cabecalho">
+    <nav class="navbar">
+      <i class="fa-solid fa-cat" id="logo"> Black Music</i>
+
+      <!-- Menu Hambúrguer -->
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Lista de navegação -->
+      <ul class="nav_lista" id="navLista">
+        <li class="nav_item">Funk</li>
+        <li class="nav_item">Sertanejo</li>
+        <li class="nav_item">Pagode</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <!-- Seção principal (destaque) -->
+    <section class="home">
+      <h1 class="titulo">
+        A melhor seleção de <span class="titulocor">Pagode, Sertanejo e Funk</span> está aqui!
+      </h1>
+    </section>
+
+    <!-- Seção FUNK -->
+    <section class="secao" id="funk">
+      <div class="titulo_section">
+        <h2><i class="fa-solid fa-fire"></i> Funk</h2>
+      </div>
+      <ul class="moldura_videos">
+        <li class="video">
+          <iframe width="300" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0"
+            allowfullscreen></iframe>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Seção SERTANEJO -->
+    <section class="secao" id="sertanejo">
+      <div class="titulo_section">
+        <h2><i class="fa-solid fa-guitar"></i> Sertanejo</h2>
+      </div>
+      <ul class="moldura_videos">
+        <li class="video">
+          <iframe width="300" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0"
+            allowfullscreen></iframe>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Seção PAGODE -->
+    <section class="secao" id="pagode">
+      <div class="titulo_section">
+        <h2><i class="fa-solid fa-drum"></i> Pagode</h2>
+      </div>
+      <ul class="moldura_videos">
+        <li class="video">
+          <iframe width="300" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0"
+            allowfullscreen></iframe>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Script para menu hambúrguer -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLista = document.getElementById('navLista');
+
+    menuToggle.addEventListener('click', function () {
+      navLista.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+
+    const navItems = document.querySelectorAll('.nav_item');
+    navItems.forEach(item => {
+      item.addEventListener('click', function () {
+        navLista.classList.remove('active');
+        menuToggle.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
