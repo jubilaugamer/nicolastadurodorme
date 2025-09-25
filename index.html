@@ -4,57 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maravilha Sound</title>
+
+    <!-- CSS local -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>maravilha sound</title>
 </head>
 
 <body>
     <header class="cabecalho">
         <nav class="navbar">
             <i class="fa-solid fa-music" id="logo"> Maravilha</i>
-            <!-- Menu Hamrburguer para mobile!-->
+
+            <!-- Botão menu hambúrguer (mobile) -->
             <button class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
-                <span></span>
+                <span></span>>
             </button>
-            <ul class="nav_lista">
+
+            <!-- Lista de navegação -->
+            <ul class="nav_lista" id="navLista">
                 <li class="nav_item">Rock</li>
                 <li class="nav_item">Samba</li>
                 <li class="nav_item">Pagode</li>
+                <li class="nav_item">Funk</li>
             </ul>
-
-
-
         </nav>
-
-
     </header>
 
     <main class="conteudo">
+        <!-- Seção principal -->
         <section class="home">
             <h1 class="titulo">
-                A melhor seleção de <span class="titulocor">músicas</span> de Maravilha
+                A melhor seleção de <span></span> class="titulocor">músicas</span> de Maravilha
             </h1>
         </section>
+
+        <!-- Seção de Funk -->
+        <section class="secao" id="funk">
+            <h2>Funk</h2>
+            <ul>
+                <li>MC Kevinho - Olha a Explosão</li>
+                <li>MC Livinho - Fazer Falta</li>
+                <li>Anitta ft. Tropkillaz - Vai Malandra</li>
+            </ul>
+        </section>
     </main>
-<script>
-        // JavaScript para controlar o menu hambúrguer
+
+    <!-- Script para menu hambúrguer -->
+    <script>
         const menuToggle = document.getElementById('menuToggle');
         const navLista = document.getElementById('navLista');
-        
-        menuToggle.addEventListener('click', function() {
+
+        menuToggle.addEventListener('click', function () {
             navLista.classList.toggle('active');
             menuToggle.classList.toggle('active');
         });
-        
-        // Fechar menu ao clicar em um item
+
+        // Fecha o menu ao clicar em um item
         const navItems = document.querySelectorAll('.nav_item');
         navItems.forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 navLista.classList.remove('active');
                 menuToggle.classList.remove('active');
             });
