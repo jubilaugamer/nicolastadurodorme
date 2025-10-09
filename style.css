@@ -1,4 +1,13 @@
+:root{
+  --cor-primaria-1:#001524;
+   --cor-primaria-2:#0a568d;
+   --cor-primaria-3:#810a0a;
+   --cor-primaria-4:#000000;
+   --cor-primaria-5:#107e8d;
 
+    --cor-primaria-1:#FFF;
+     --cor-primaria-1:#1D1D1D;
+}
 
 /* Reset básico */
 * {
