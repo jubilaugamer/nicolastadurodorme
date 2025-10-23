@@ -1,10 +1,10 @@
 :root {
-  --cor-funk: #810a0a;        /* vermelho funk */
-  --cor-sertanejo: #0a568d;   /* azul sertanejo */
-  --cor-pagode: #107e8d;      /* verde pagode */
-  --cor-header: blueviolet;
-  --cor-texto: #ffffff;
-  --cor-fundo: #f5f5f5;
+  --cor-preta: #000000;
+  --cor-funk: #ff0044;
+  --cor-sertanejo: #0074b7;
+  --cor-pagode: #00b894;
+  --cor-branca: #ffffff;
+  --cor-fundo: #111111;
 }
 
 /* RESET */
@@ -14,47 +14,56 @@
   box-sizing: border-box;
 }
 
+/* BODY */
+body {
+  background-color: var(--cor-fundo);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor-branca);
+}
+
 /* HEADER */
 header {
   width: 100%;
-  background-color: var(--cor-header);
+  background-color: var(--cor-preta);
   padding: 20px 8%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Logo */
+/* LOGO */
 #logo {
-  color: var(--cor-texto);
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: bold;
+  color: var(--cor-branca);
+  text-transform: uppercase;
 }
 
-/* Lista de botões */
+/* MENU LISTA */
 .nav_lista {
   display: flex;
   list-style: none;
   gap: 40px;
 }
 
-/* Botões principais */
+/* BOTÕES */
 .nav_item {
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px 18px;
   border-radius: 6px;
   cursor: pointer;
-  color: var(--cor-texto);
-  transition: 0.3s;
   font-weight: 600;
+  transition: 0.3s;
+  text-transform: uppercase;
 }
 
 /* Cores individuais */
@@ -68,18 +77,18 @@ header {
   background-color: var(--cor-pagode);
 }
 
-/* Efeito hover */
+/* Hover */
 .nav_item:hover {
   transform: scale(1.1);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-/* Botão ativo */
+/* Ativo */
 .nav_item.ativo {
-  outline: 2px solid white;
+  outline: 2px solid var(--cor-branca);
 }
 
-/* MENU HAMBURGUER (celular) */
+/* MENU HAMBURGUER (CELULAR) */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -90,49 +99,44 @@ header {
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background-color: var(--cor-texto);
-  margin: 3px 0;
+  background-color: var(--cor-branca);
+  margin: 4px 0;
 }
 
 /* CONTEÚDO */
-body {
-  font-family: Arial, sans-serif;
-  background: var(--cor-fundo);
-  color: #222;
-}
-
 .conteudo {
   max-width: 1200px;
-  margin: 120px auto 40px;
+  margin: 130px auto 40px;
   padding: 0 20px;
 }
 
 .titulo {
   text-align: center;
   font-size: 2.5rem;
-  color: #1d1d1d;
+  color: var(--cor-branca);
+  margin-bottom: 40px;
 }
 
 .titulocor {
-  color: var(--cor-header);
+  color: var(--cor-pagode);
 }
 
+/* SEÇÕES */
 .secao {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .titulo_section {
-  border-bottom: 2px solid var(--cor-header);
+  border-bottom: 2px solid var(--cor-branca);
   margin-bottom: 20px;
 }
 
 .titulo_section h2 {
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
+/* VÍDEOS */
 .moldura_videos {
   display: flex;
   flex-wrap: wrap;
@@ -144,9 +148,9 @@ body {
 .video {
   flex: 1 1 300px;
   max-width: 480px;
-  background: white;
+  background: #222;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
 
@@ -166,7 +170,7 @@ body {
     position: absolute;
     top: 70px;
     right: 20px;
-    background: var(--cor-header);
+    background-color: var(--cor-preta);
     flex-direction: column;
     padding: 15px 20px;
     border-radius: 8px;

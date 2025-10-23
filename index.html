@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site de Músicas 🎵</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Music 🎶</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- CABEÇALHO -->
+  <!-- ======== CABEÇALHO ======== -->
   <header>
     <nav class="navbar">
-      <h1 id="logo">🎶 Black Music</h1>
+      <h1 id="logo">🎵 Black Music</h1>
 
-      <!-- Menu Hambúrguer (celular) -->
+      <!-- Botão do menu (para celular) -->
       <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
@@ -29,13 +29,16 @@
     </nav>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- ======== CONTEÚDO ======== -->
   <main class="conteudo">
     <section class="home">
-      <h2 class="titulo">A melhor seleção de <span class="titulocor">Funk, Sertanejo e Pagode</span> está aqui!</h2>
+      <h2 class="titulo">
+        Bem-vindo ao <span class="titulocor">Black Music!</span><br>
+        Aqui tem o melhor do <strong>Funk, Sertanejo e Pagode</strong> 🎶
+      </h2>
     </section>
 
-    <!-- SEÇÃO FUNK -->
+    <!-- FUNK -->
     <section class="secao" id="funk">
       <div class="titulo_section">
         <h2>🔥 Funk</h2>
@@ -53,7 +56,7 @@
       </ul>
     </section>
 
-    <!-- SEÇÃO SERTANEJO -->
+    <!-- SERTANEJO -->
     <section class="secao" id="sertanejo">
       <div class="titulo_section">
         <h2>🎸 Sertanejo</h2>
@@ -71,7 +74,7 @@
       </ul>
     </section>
 
-    <!-- SEÇÃO PAGODE -->
+    <!-- PAGODE -->
     <section class="secao" id="pagode">
       <div class="titulo_section">
         <h2>🥁 Pagode</h2>
@@ -90,7 +93,7 @@
     </section>
   </main>
 
-  <!-- JAVASCRIPT -->
+  <!-- ======== JAVASCRIPT ======== -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const menuToggle = document.getElementById("menuToggle");
@@ -98,32 +101,27 @@
       const botoes = document.querySelectorAll(".nav_item");
       const secoes = document.querySelectorAll(".secao");
 
-      // Abre e fecha o menu (modo celular)
+      // Menu hambúrguer (celular)
       menuToggle.addEventListener("click", () => {
         navLista.classList.toggle("active");
       });
 
-      // Função de troca de seções
+      // Mostra só a seção clicada
       botoes.forEach((botao) => {
         botao.addEventListener("click", () => {
           const alvo = botao.getAttribute("data-target");
 
-          // Esconde todas
           secoes.forEach(secao => secao.style.display = "none");
-
-          // Mostra só a seção clicada
           document.getElementById(alvo).style.display = "block";
 
-          // Destaca o botão ativo
           botoes.forEach(b => b.classList.remove("ativo"));
           botao.classList.add("ativo");
 
-          // Fecha o menu no mobile
           navLista.classList.remove("active");
         });
       });
 
-      // Mostra tudo inicialmente
+      // Mostra todas inicialmente
       secoes.forEach(secao => secao.style.display = "block");
     });
   </script>
