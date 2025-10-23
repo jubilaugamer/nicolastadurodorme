@@ -1,15 +1,13 @@
-:root{
-  --cor-primaria-1:#001524;
-   --cor-primaria-2:#0a568d;
-   --cor-primaria-3:#810a0a;
-   --cor-primaria-4:#000000;
-   --cor-primaria-5:#107e8d;
-
-    --cor-primaria-1:#FFF;
-     --cor-primaria-1:#1D1D1D;
+:root {
+  --cor-funk: #810a0a;        /* vermelho funk */
+  --cor-sertanejo: #0a568d;   /* azul sertanejo */
+  --cor-pagode: #107e8d;      /* verde pagode */
+  --cor-header: blueviolet;
+  --cor-texto: #ffffff;
+  --cor-fundo: #f5f5f5;
 }
 
-/* Reset básico */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -19,111 +17,113 @@
 /* HEADER */
 header {
   width: 100%;
+  background-color: var(--cor-header);
   padding: 20px 8%;
-  background-color: blueviolet;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
 }
 
-/* Logo */
-#logo {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: 600;
-}
-
-/* Navbar container */
+/* Navbar */
 .navbar {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Lista de navegação */
+/* Logo */
+#logo {
+  color: var(--cor-texto);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Lista de botões */
 .nav_lista {
   display: flex;
   list-style: none;
-  gap: 80px;
-  text-transform: uppercase;
+  gap: 40px;
 }
 
-/* Itens do menu */
+/* Botões principais */
 .nav_item {
-  font-size: 25px;
-  color: white;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  color: var(--cor-texto);
+  transition: 0.3s;
+  font-weight: 600;
 }
 
-/* Hover nos itens */
+/* Cores individuais */
+.nav_item[data-target="funk"] {
+  background-color: var(--cor-funk);
+}
+.nav_item[data-target="sertanejo"] {
+  background-color: var(--cor-sertanejo);
+}
+.nav_item[data-target="pagode"] {
+  background-color: var(--cor-pagode);
+}
+
+/* Efeito hover */
 .nav_item:hover {
-  background-color: rgb(191, 4, 191);
-  color: rgb(155, 153, 153);
-  text-decoration: underline;
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 
-/* MENU HAMBURGUER - escondido desktop */
+/* Botão ativo */
+.nav_item.ativo {
+  outline: 2px solid white;
+}
+
+/* MENU HAMBURGUER (celular) */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  cursor: pointer;
   background: none;
   border: none;
-  padding: 5px;
+  cursor: pointer;
 }
-
-/* Linhas do hambúrguer */
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: var(--cor-texto);
   margin: 3px 0;
-  transition: 0.3s;
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* CONTEÚDO */
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: #222;
+}
+
 .conteudo {
   max-width: 1200px;
-  margin: 100px auto 40px; /* top margin para compensar o header fixo */
+  margin: 120px auto 40px;
   padding: 0 20px;
 }
 
-/* Seção home (destaque) */
-.home {
-  display: flex;
-  min-height: calc(100vh - 140px);
-  justify-content: center;
-  align-items: center;
-}
-
-/* Título principal */
 .titulo {
-  font-size: 4rem;
-  color: #1d1d1d;
   text-align: center;
+  font-size: 2.5rem;
+  color: #1d1d1d;
 }
 
-/* Cor especial no título */
 .titulocor {
-  color: blueviolet;
+  color: var(--cor-header);
 }
 
-/* Seções das músicas */
-section.secao {
-  width: 100%;
-  padding: 20px 8%;
+.secao {
   margin-bottom: 50px;
-  display: block;
 }
 
-/* Título das seções */
 .titulo_section {
-  margin-bottom: 25px;
-  border-bottom: 2px solid blueviolet;
-  padding-bottom: 5px;
+  border-bottom: 2px solid var(--cor-header);
+  margin-bottom: 20px;
 }
 
 .titulo_section h2 {
@@ -131,21 +131,16 @@ section.secao {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #222;
 }
 
-/* Lista de vídeos */
 .moldura_videos {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  padding: 0;
-  margin: 0;
   justify-content: center;
+  list-style: none;
 }
 
-/* Cada vídeo */
 .video {
   flex: 1 1 300px;
   max-width: 480px;
@@ -155,49 +150,36 @@ section.secao {
   overflow: hidden;
 }
 
-/* Iframe do vídeo */
 .video iframe {
   width: 100%;
   height: 270px;
   border: none;
-  display: block;
 }
 
-/* RESPONSIVIDADE - Menu e layout */
-
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  /* Exibe menu hambúrguer */
   .menu-toggle {
     display: flex;
   }
 
-  /* Oculta lista padrão */
   .nav_lista {
     position: absolute;
-    top: 65px;
+    top: 70px;
     right: 20px;
-    background: blueviolet;
+    background: var(--cor-header);
     flex-direction: column;
     padding: 15px 20px;
     border-radius: 8px;
     display: none;
-    width: 180px;
     gap: 15px;
   }
 
-  /* Lista ativa (quando aberta) */
   .nav_lista.active {
     display: flex;
   }
 
-  /* Itens da lista no mobile */
   .nav_item {
-    font-size: 20px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .nav_item:last-child {
-    border-bottom: none;
+    text-align: center;
+    font-size: 18px;
   }
 }

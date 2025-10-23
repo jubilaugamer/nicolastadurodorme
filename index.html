@@ -1,186 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Site de Músicas</title>
-
-  <!-- CSS -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      color: #222;
-    }
-
-    .cabecalho {
-      background-color: #222;
-      color: white;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    #logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 6px;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: white;
-      border-radius: 3px;
-    }
-
-    .nav_lista {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav_item {
-      cursor: pointer;
-      font-weight: 600;
-      text-transform: uppercase;
-      transition: color 0.3s;
-    }
-
-    .nav_item:hover {
-      color: #ff6600;
-    }
-
-    .nav_item.ativo {
-      color: #ff6600;
-      text-decoration: underline;
-    }
-
-    .conteudo {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .titulo {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .titulocor {
-      color: #ff6600;
-    }
-
-    .secao {
-      margin-bottom: 50px;
-    }
-
-    .titulo_section {
-      margin-bottom: 25px;
-      border-bottom: 2px solid #ff6600;
-      padding-bottom: 5px;
-    }
-
-    .titulo_section h2 {
-      font-size: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #222;
-    }
-
-    .moldura_videos {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      padding: 0;
-      margin: 0;
-      justify-content: center;
-    }
-
-    .video {
-      flex: 1 1 300px;
-      max-width: 480px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .video iframe {
-      width: 100%;
-      height: 270px;
-      border: none;
-      display: block;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-
-      .nav_lista {
-        position: absolute;
-        top: 65px;
-        right: 20px;
-        background: #222;
-        flex-direction: column;
-        padding: 15px 20px;
-        border-radius: 8px;
-        display: none;
-        width: 180px;
-      }
-
-      .nav_lista.active {
-        display: flex;
-      }
-
-      .nav_item {
-        padding: 10px 0;
-        color: white;
-        border-bottom: 1px solid #444;
-      }
-
-      .nav_item:last-child {
-        border-bottom: none;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Músicas 🎵</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="cabecalho">
+  <!-- CABEÇALHO -->
+  <header>
     <nav class="navbar">
-      <i id="logo">🎵 Black Music</i>
+      <h1 id="logo">🎶 Black Music</h1>
 
-      <!-- Botão hambúrguer -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <!-- Menu Hambúrguer (celular) -->
+      <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Botões (menu) -->
+      <!-- Botões de estilos musicais -->
       <ul class="nav_lista" id="navLista">
         <li class="nav_item" data-target="funk">Funk</li>
         <li class="nav_item" data-target="sertanejo">Sertanejo</li>
@@ -189,14 +29,13 @@
     </nav>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main class="conteudo">
     <section class="home">
-      <h1 class="titulo">
-        A melhor seleção de <span class="titulocor">Pagode, Sertanejo e Funk</span> está aqui!
-      </h1>
+      <h2 class="titulo">A melhor seleção de <span class="titulocor">Funk, Sertanejo e Pagode</span> está aqui!</h2>
     </section>
 
-    <!-- FUNK -->
+    <!-- SEÇÃO FUNK -->
     <section class="secao" id="funk">
       <div class="titulo_section">
         <h2>🔥 Funk</h2>
@@ -214,7 +53,7 @@
       </ul>
     </section>
 
-    <!-- SERTANEJO -->
+    <!-- SEÇÃO SERTANEJO -->
     <section class="secao" id="sertanejo">
       <div class="titulo_section">
         <h2>🎸 Sertanejo</h2>
@@ -232,7 +71,7 @@
       </ul>
     </section>
 
-    <!-- PAGODE -->
+    <!-- SEÇÃO PAGODE -->
     <section class="secao" id="pagode">
       <div class="titulo_section">
         <h2>🥁 Pagode</h2>
@@ -251,41 +90,41 @@
     </section>
   </main>
 
-  <!-- JavaScript -->
+  <!-- JAVASCRIPT -->
   <script>
-    // === MENU HAMBÚRGUER (para celular) ===
-    const menuToggle = document.getElementById("menuToggle");
-    const navLista = document.getElementById("navLista");
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById("menuToggle");
+      const navLista = document.getElementById("navLista");
+      const botoes = document.querySelectorAll(".nav_item");
+      const secoes = document.querySelectorAll(".secao");
 
-    menuToggle.addEventListener("click", () => {
-      navLista.classList.toggle("active");
-    });
-
-    // === MOSTRAR APENAS A SEÇÃO CLICADA ===
-    const botoes = document.querySelectorAll(".nav_item");
-    const secoes = document.querySelectorAll(".secao");
-
-    // Primeiro, mostramos tudo (para abrir bonito)
-    secoes.forEach(secao => secao.style.display = "block");
-
-    // Depois, adicionamos o clique em cada botão
-    botoes.forEach(botao => {
-      botao.addEventListener("click", () => {
-        const alvo = botao.getAttribute("data-target");
-
-        // Esconde todas as seções
-        secoes.forEach(secao => secao.style.display = "none");
-
-        // Mostra a seção que o aluno clicou (funk, sertanejo ou pagode)
-        document.getElementById(alvo).style.display = "block";
-
-        // Fecha o menu no celular
-        navLista.classList.remove("active");
-
-        // Deixa o botão clicado colorido
-        botoes.forEach(b => b.classList.remove("ativo"));
-        botao.classList.add("ativo");
+      // Abre e fecha o menu (modo celular)
+      menuToggle.addEventListener("click", () => {
+        navLista.classList.toggle("active");
       });
+
+      // Função de troca de seções
+      botoes.forEach((botao) => {
+        botao.addEventListener("click", () => {
+          const alvo = botao.getAttribute("data-target");
+
+          // Esconde todas
+          secoes.forEach(secao => secao.style.display = "none");
+
+          // Mostra só a seção clicada
+          document.getElementById(alvo).style.display = "block";
+
+          // Destaca o botão ativo
+          botoes.forEach(b => b.classList.remove("ativo"));
+          botao.classList.add("ativo");
+
+          // Fecha o menu no mobile
+          navLista.classList.remove("active");
+        });
+      });
+
+      // Mostra tudo inicialmente
+      secoes.forEach(secao => secao.style.display = "block");
     });
   </script>
 </body>
