@@ -1,26 +1,17 @@
-:root{
-  --cor-primaria-1:#001524;
-   --cor-primaria-2:#0a568d;
-   --cor-primaria-3:#810a0a;
-   --cor-primaria-4:#000000;
-   --cor-primaria-5:#107e8d;
-
-    --cor-primaria-1:#FFF;
-     --cor-primaria-1:#1D1D1D;
-}
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  /* Paleta de cores */
+  --cor-funk: #810a0a;        /* vermelho intenso */
+  --cor-sertanejo: #0a568d;   /* azul sertanejo */
+  --cor-pagode: #107e8d;      /* verde-água pagode */
+  --cor-texto: #ffffff;
+  --cor-fundo-header: blueviolet;
 }
 
 /* HEADER */
 header {
   width: 100%;
   padding: 20px 8%;
-  background-color: blueviolet;
+  background-color: var(--cor-fundo-header);
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +21,7 @@ header {
 /* Logo */
 #logo {
   font-size: 1.5rem;
-  color: white;
+  color: var(--cor-texto);
   font-weight: 600;
 }
 
@@ -46,23 +37,44 @@ header {
 .nav_lista {
   display: flex;
   list-style: none;
-  gap: 80px;
+  gap: 40px;
   text-transform: uppercase;
 }
 
-/* Itens do menu */
+/* Itens do menu (botões) */
 .nav_item {
-  font-size: 25px;
-  color: white;
+  font-size: 22px;
+  color: var(--cor-texto);
+  padding: 8px 18px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
-/* Hover nos itens */
+/* 🎵 Cores individuais */
+.nav_item[data-target="funk"] {
+  background-color: var(--cor-funk);
+}
+
+.nav_item[data-target="sertanejo"] {
+  background-color: var(--cor-sertanejo);
+}
+
+.nav_item[data-target="pagode"] {
+  background-color: var(--cor-pagode);
+}
+
+/* Hover bonito */
 .nav_item:hover {
-  background-color: rgb(191, 4, 191);
-  color: rgb(155, 153, 153);
-  text-decoration: underline;
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Botão ativo (clicado) */
+.nav_item.ativo {
+  outline: 3px solid white;
+  box-shadow: 0 0 10px white;
 }
 
 /* MENU HAMBURGUER - escondido desktop */
@@ -75,7 +87,6 @@ header {
   padding: 5px;
 }
 
-/* Linhas do hambúrguer */
 .menu-toggle span {
   width: 25px;
   height: 3px;
@@ -87,28 +98,8 @@ header {
 /* CONTEÚDO PRINCIPAL */
 .conteudo {
   max-width: 1200px;
-  margin: 100px auto 40px; /* top margin para compensar o header fixo */
+  margin: 100px auto 40px;
   padding: 0 20px;
-}
-
-/* Seção home (destaque) */
-.home {
-  display: flex;
-  min-height: calc(100vh - 140px);
-  justify-content: center;
-  align-items: center;
-}
-
-/* Título principal */
-.titulo {
-  font-size: 4rem;
-  color: #1d1d1d;
-  text-align: center;
-}
-
-/* Cor especial no título */
-.titulocor {
-  color: blueviolet;
 }
 
 /* Seções das músicas */
@@ -119,7 +110,6 @@ section.secao {
   display: block;
 }
 
-/* Título das seções */
 .titulo_section {
   margin-bottom: 25px;
   border-bottom: 2px solid blueviolet;
@@ -145,7 +135,6 @@ section.secao {
   justify-content: center;
 }
 
-/* Cada vídeo */
 .video {
   flex: 1 1 300px;
   max-width: 480px;
@@ -155,7 +144,6 @@ section.secao {
   overflow: hidden;
 }
 
-/* Iframe do vídeo */
 .video iframe {
   width: 100%;
   height: 270px;
@@ -163,38 +151,34 @@ section.secao {
   display: block;
 }
 
-/* RESPONSIVIDADE - Menu e layout */
-
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  /* Exibe menu hambúrguer */
   .menu-toggle {
     display: flex;
   }
 
-  /* Oculta lista padrão */
   .nav_lista {
     position: absolute;
     top: 65px;
     right: 20px;
-    background: blueviolet;
+    background: var(--cor-fundo-header);
     flex-direction: column;
     padding: 15px 20px;
     border-radius: 8px;
     display: none;
-    width: 180px;
+    width: 200px;
     gap: 15px;
   }
 
-  /* Lista ativa (quando aberta) */
   .nav_lista.active {
     display: flex;
   }
 
-  /* Itens da lista no mobile */
   .nav_item {
     font-size: 20px;
     padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
   }
 
   .nav_item:last-child {
