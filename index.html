@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Site de Músicas</title>
 
-  <!-- CSS externo -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <!-- CSS -->
   <style>
-    /* CSS básico para vídeos e layout */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -78,6 +66,11 @@
 
     .nav_item:hover {
       color: #ff6600;
+    }
+
+    .nav_item.ativo {
+      color: #ff6600;
+      text-decoration: underline;
     }
 
     .conteudo {
@@ -140,7 +133,7 @@
       display: block;
     }
 
-    /* Responsividade menu hambúrguer */
+    /* Responsividade */
     @media (max-width: 768px) {
       .menu-toggle {
         display: flex;
@@ -178,16 +171,16 @@
 <body>
   <header class="cabecalho">
     <nav class="navbar">
-      <i class="fa-solid fa-cat" id="logo"> Black Music</i>
+      <i id="logo">🎵 Black Music</i>
 
-      <!-- Menu Hambúrguer -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <!-- Botão hambúrguer -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- Lista de navegação -->
+      <!-- Botões (menu) -->
       <ul class="nav_lista" id="navLista">
         <li class="nav_item" data-target="funk">Funk</li>
         <li class="nav_item" data-target="sertanejo">Sertanejo</li>
@@ -206,32 +199,17 @@
     <!-- FUNK -->
     <section class="secao" id="funk">
       <div class="titulo_section">
-        <h2><i class="fa-solid fa-fire"></i> Funk</h2>
+        <h2>🔥 Funk</h2>
       </div>
       <ul class="moldura_videos">
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/M_eOUE6pFKY"
-            title="TIPO NINO ABRAVANEL - TAPA NA CARA DA P"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.youtube.com/embed/M_eOUE6pFKY" title="Funk 1"></iframe>
         </li>
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/9wb9QPXv_rs"
-            title="SENTA OLHANDO PRA MIM (Funk 24por48)"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.youtube.com/embed/9wb9QPXv_rs" title="Funk 2"></iframe>
         </li>
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/v0-ALy9m1FE"
-            title="APENAS 18 AINDA BB TEM CORPÃO"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.youtube.com/embed/v0-ALy9m1FE" title="Funk 3"></iframe>
         </li>
       </ul>
     </section>
@@ -239,32 +217,17 @@
     <!-- SERTANEJO -->
     <section class="secao" id="sertanejo">
       <div class="titulo_section">
-        <h2><i class="fa-solid fa-guitar"></i> Sertanejo</h2>
+        <h2>🎸 Sertanejo</h2>
       </div>
       <ul class="moldura_videos">
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/9Vt4XguN2-A"
-            title="Henrique e Juliano - ÚLTIMA SAUDADE"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.youtube.com/embed/9Vt4XguN2-A" title="Sertanejo 1"></iframe>
         </li>
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/WLhMxtuZr70"
-            title="Danilo e Davi - Apaga Apaga Apaga"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.youtube.com/embed/WLhMxtuZr70" title="Sertanejo 2"></iframe>
         </li>
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/6lSH_DahbGg"
-            title="SERTANEJO 2025 - As Melhores Músicas Sertanejas"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.youtube.com/embed/6lSH_DahbGg" title="Sertanejo 3"></iframe>
         </li>
       </ul>
     </section>
@@ -272,20 +235,58 @@
     <!-- PAGODE -->
     <section class="secao" id="pagode">
       <div class="titulo_section">
-        <h2><i class="fa-solid fa-drum"></i> Pagode</h2>
+        <h2>🥁 Pagode</h2>
       </div>
       <ul class="moldura_videos">
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/n5wxZ_OBUXk"
-            title="Grupo Menos é Mais - Coração Partido"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+          <iframe src="https://www.youtube.com/embed/n5wxZ_OBUXk" title="Pagode 1"></iframe>
         </li>
         <li class="video">
-          <iframe
-            src="https://www.youtube.com/embed/qPgwDlqdiD0"
-            title="Grupo Menos é Mais - Churrasquinho Menos é Mais 3"
-            allow="accelerometer;
-    <section class="secao" id="pagode">
+          <iframe src="https://www.youtube.com/embed/qPgwDlqdiD0" title="Pagode 2"></iframe>
+        </li>
+        <li class="video">
+          <iframe src="https://www.youtube.com/embed/D6LrA1Zq2Go" title="Pagode 3"></iframe>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    // === MENU HAMBÚRGUER (para celular) ===
+    const menuToggle = document.getElementById("menuToggle");
+    const navLista = document.getElementById("navLista");
+
+    menuToggle.addEventListener("click", () => {
+      navLista.classList.toggle("active");
+    });
+
+    // === MOSTRAR APENAS A SEÇÃO CLICADA ===
+    const botoes = document.querySelectorAll(".nav_item");
+    const secoes = document.querySelectorAll(".secao");
+
+    // Primeiro, mostramos tudo (para abrir bonito)
+    secoes.forEach(secao => secao.style.display = "block");
+
+    // Depois, adicionamos o clique em cada botão
+    botoes.forEach(botao => {
+      botao.addEventListener("click", () => {
+        const alvo = botao.getAttribute("data-target");
+
+        // Esconde todas as seções
+        secoes.forEach(secao => secao.style.display = "none");
+
+        // Mostra a seção que o aluno clicou (funk, sertanejo ou pagode)
+        document.getElementById(alvo).style.display = "block";
+
+        // Fecha o menu no celular
+        navLista.classList.remove("active");
+
+        // Deixa o botão clicado colorido
+        botoes.forEach(b => b.classList.remove("ativo"));
+        botao.classList.add("ativo");
+      });
+    });
+  </script>
+</body>
+</html>
