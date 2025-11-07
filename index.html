@@ -1,88 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>musics by emi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Music 🎶</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="cabecalho">
+  <!-- ======== CABEÇALHO ======== -->
+  <header>
     <nav class="navbar">
-      <i class="fa-solid fa-moon" id="logo"> emili's music</i>
+      <h1 id="logo">🎵 Black Music</h1>
+
+      <!-- Botão do menu (para celular) -->
       <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-
+      <!-- Botões de estilos musicais -->
       <ul class="nav_lista" id="navLista">
-        <li class="nav_item"><a href="#mpb">mpb</a></li>
-        <li class="nav_item"><a href="#indie pop">indie pop</a></li>
-        <li class="nav_item"><a href="alternativo">alternativo</a></li>
-
-
+        <li class="nav_item" data-target="funk">Funk</li>
+        <li class="nav_item" data-target="sertanejo">Sertanejo</li>
+        <li class="nav_item" data-target="pagode">Pagode</li>
       </ul>
-
-
-
-
     </nav>
-
   </header>
+
+  <!-- ======== CONTEÚDO ======== -->
   <main class="conteudo">
     <section class="home">
-      <h1 class="titulo">
-        the greatest playlist of all time
-
-
-      </h1>
+      <h2 class="titulo">
+        Bem-vindo ao <span class="titulocor">Black Music!</span><br>
+        Aqui tem o melhor do <strong>Funk, Sertanejo e Pagode</strong> 🎶
+      </h2>
     </section>
-    <section class="secao" id="mpb">
-      <div class="title_section">
-        <h1><i class="fa-solid fa-sun"> mpb</i></h1>
-        
+
+    <!-- FUNK -->
+    <section class="secao" id="funk">
+      <div class="titulo_section">
+        <h2>🔥 Funk</h2>
       </div>
       <ul class="moldura_videos">
         <li class="video">
-         <iframe width="1330" height="748" src="https://www.youtube.com/embed/h9-LLQqAOXQ" title="Vanessa da Mata - Ainda Bem (Áudio Oficial)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>z
+          <iframe src="https://www.youtube.com/embed/M_eOUE6pFKY" title="Funk 1"></iframe>
         </li>
         <li class="video">
-<iframe width="1330" height="748" src="https://www.youtube.com/embed/Jjq0RWa_sXo" title="Não Sei Dançar" frameborder="0" allow="accelerometer; autoplay;    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/9wb9QPXv_rs" title="Funk 2"></iframe>
         </li>
         <li class="video">
-<iframe width="1330" height="748" src="https://www.youtube.com/embed/iy_pSTFUvJE" title="Pelo Tempo Que Durar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/v0-ALy9m1FE" title="Funk 3"></iframe>
         </li>
-       
       </ul>
     </section>
-    
-  </main>
-  <script>
-        // JavaScript para controlar o menu hambúrguer
-        const menuToggle = document.getElementById('menuToggle');
-        const navLista = document.getElementById('navLista');
-        
-        menuToggle.addEventListener('click', function() {
-            navLista.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-        
-        // Fechar menu ao clicar em um item
-        const navItems = document.querySelectorAll('.nav_item');
-        navItems.forEach(item => {
-            item.addEventListener('click', function() {
-                navLista.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-    </script>
-</body>
 
+    <!-- SERTANEJO -->
+    <section class="secao" id="sertanejo">
+      <div class="titulo_section">
+        <h2>🎸 Sertanejo</h2>
+      </div>
+      <ul class="moldura_videos">
+        <li class="video">
+          <iframe src="https://www.youtube.com/embed/9Vt4XguN2-A" title="Sertanejo 1"></iframe>
+        </li>
+        <li class="video">
+          <iframe src="https://www.youtube.com/embed/WLhMxtuZr70" title="Sertanejo 2"></iframe>
+        </li>
+        <li class="video">
+          <iframe src="https://www.youtube.com/embed/6lSH_DahbGg" title="Sertanejo 3"></iframe>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PAGODE -->
+    <section class="secao" id="pagode">
+      <div class="titulo_section">
+        <h2>🥁 Pagode</h2>
+      </div>
+      <ul class="moldura_videos">
+        <li class="video">
+          <iframe src="https://www.youtube.com/embed/n5wxZ_OBUXk" title="Pagode 1"></iframe>
+        </li>
+        <li class="video">
+          <iframe src="https://www.youtube.com/embed/qPgwDlqdiD0" title="Pagode 2"></iframe>
+        </li>
+        <li class="video">
+          <iframe src="https://www.youtube.com/embed/D6LrA1Zq2Go" title="Pagode 3"></iframe>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ======== JAVASCRIPT ======== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById("menuToggle");
+      const navLista = document.getElementById("navLista");
+      const botoes = document.querySelectorAll(".nav_item");
+      const secoes = document.querySelectorAll(".secao");
+
+      // Menu hambúrguer (celular)
+      menuToggle.addEventListener("click", () => {
+        navLista.classList.toggle("active");
+      });
+
+      // Mostra só a seção clicada
+      botoes.forEach((botao) => {
+        botao.addEventListener("click", () => {
+          const alvo = botao.getAttribute("data-target");
+
+          secoes.forEach(secao => secao.style.display = "none");
+          document.getElementById(alvo).style.display = "block";
+
+          botoes.forEach(b => b.classList.remove("ativo"));
+          botao.classList.add("ativo");
+
+          navLista.classList.remove("active");
+        });
+      });
+
+      // Mostra todas inicialmente
+      secoes.forEach(secao => secao.style.display = "block");
+    });
+  </script>
+</body>
 </html>
