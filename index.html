@@ -1,129 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Black Music 🎶</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>maravilha sound</title>
 </head>
 
 <body>
-  <!-- ======== CABEÇALHO ======== -->
-  <header>
-    <nav class="navbar">
-      <h1 id="logo">🎵 Black Music</h1>
+    <header class="cabecalho">
+        <nav class="navbar">
+            <i class="fa-solid fa-music" id="logo"> Maravilha</i>
+            <!-- Menu Hamrburguer para mobile!-->
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav_lista" id="navLista">
+                <li class="nav_item"><a href="#rock">Rock</a></li>
+                <li class="nav_item"><a href="#samba">Samba</a></li>
+                <li class="nav_item"><a href="#pagode">Pagode</a></li>
+            </ul>
 
-      <!-- Botão do menu (para celular) -->
-      <button class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
 
-      <!-- Botões de estilos musicais -->
-      <ul class="nav_lista" id="navLista">
-        <li class="nav_item" data-target="funk">Funk</li>
-        <li class="nav_item" data-target="sertanejo">Sertanejo</li>
-        <li class="nav_item" data-target="pagode">Pagode</li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- ======== CONTEÚDO ======== -->
-  <main class="conteudo">
-    <section class="home">
-      <h2 class="titulo">
-        Bem-vindo ao <span class="titulocor">Black Music!</span><br>
-        Aqui tem o melhor do <strong>Funk, Sertanejo e Pagode</strong> 🎶
-      </h2>
-    </section>
+        </nav>
 
-    <!-- FUNK -->
-    <section class="secao" id="funk">
-      <div class="titulo_section">
-        <h2>🔥 Funk</h2>
-      </div>
-      <ul class="moldura_videos">
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/M_eOUE6pFKY" title="Funk 1"></iframe>
-        </li>
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/9wb9QPXv_rs" title="Funk 2"></iframe>
-        </li>
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/v0-ALy9m1FE" title="Funk 3"></iframe>
-        </li>
-      </ul>
-    </section>
 
-    <!-- SERTANEJO -->
-    <section class="secao" id="sertanejo">
-      <div class="titulo_section">
-        <h2>🎸 Sertanejo</h2>
-      </div>
-      <ul class="moldura_videos">
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/9Vt4XguN2-A" title="Sertanejo 1"></iframe>
-        </li>
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/WLhMxtuZr70" title="Sertanejo 2"></iframe>
-        </li>
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/6lSH_DahbGg" title="Sertanejo 3"></iframe>
-        </li>
-      </ul>
-    </section>
+    </header>
 
-    <!-- PAGODE -->
-    <section class="secao" id="pagode">
-      <div class="titulo_section">
-        <h2>🥁 Pagode</h2>
-      </div>
-      <ul class="moldura_videos">
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/n5wxZ_OBUXk" title="Pagode 1"></iframe>
-        </li>
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/qPgwDlqdiD0" title="Pagode 2"></iframe>
-        </li>
-        <li class="video">
-          <iframe src="https://www.youtube.com/embed/D6LrA1Zq2Go" title="Pagode 3"></iframe>
-        </li>
-      </ul>
-    </section>
-  </main>
+    <main class="conteudo">
+        <section class="home">
+            <h1 class="titulo">
+                A melhor seleção de <span class="titulocor">músicas</span> de Maravilha
+            </h1>
+        </section>
 
-  <!-- ======== JAVASCRIPT ======== -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuToggle = document.getElementById("menuToggle");
-      const navLista = document.getElementById("navLista");
-      const botoes = document.querySelectorAll(".nav_item");
-      const secoes = document.querySelectorAll(".secao");
+        <section class="secao" id="rock">
+            <div class="titulo_section">
+                <h1><i class="fa-brands fa-rockrms"></i> Rock</h1>
+            </div>
+            <ul class="moldura_videos">
+                <li class="video">
+                 <iframe width="1323" height="703" src="https://www.youtube.com/embed/u2GCZGITTDw" title="Guardians of the Galaxy: Remix (Vol. 1 &amp; Vol. 2) (Full Sound track) #guardiansofthegalaxy #awesome" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+                </li>
+                <li class="video">
+                 <iframe width="1250" height="703" src="https://www.youtube.com/embed/iywaBOMvYLI" title="System Of A Down - Toxicity (Official HD Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+                </li>
+                <li class="video">
+                 <iframe width="1334" height="703" src="https://www.youtube.com/embed/nfT7JBFnINc" title="Foo Fighters - Times Like These (US Version - Official HD Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                </li>
+                
+                
+            </ul>
+        </section>
 
-      // Menu hambúrguer (celular)
-      menuToggle.addEventListener("click", () => {
-        navLista.classList.toggle("active");
-      });
+        <section class="secao" id="samba">
+            <div class="titulo_section">
+                <h1><i class="fa-solid fa-guitar"></i> Samba</h1>
+            </div>
+            <ul class="moldura_videos">
+                <li class="video">
+                 <iframe width="937" height="703" src="https://www.youtube.com/embed/87i1ZjqO7L8" title="Jorge Aragão - Ao vivo 3 (Da noite pro dia) FULL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+                </li>
+                <li class="video">
+                 <iframe width="937" height="703" src="https://www.youtube.com/embed/inj6bQlAV5g" title="Fundo de Quintal   Ao vivo convida - FULL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                </li>
+                <li class="video">
+                 <iframe width="1250" height="703" src="https://www.youtube.com/embed/zx8YmaN9yC4" title="Samba | Classicos Do Samba | Sambas Antigos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                </li>
+                
+                
+            </ul>
+        </section>
 
-      // Mostra só a seção clicada
-      botoes.forEach((botao) => {
-        botao.addEventListener("click", () => {
-          const alvo = botao.getAttribute("data-target");
+    </main>
+    <script>
+        // JavaScript para controlar o menu hambúrguer
+        const menuToggle = document.getElementById('menuToggle');
+        const navLista = document.getElementById('navLista');
 
-          secoes.forEach(secao => secao.style.display = "none");
-          document.getElementById(alvo).style.display = "block";
-
-          botoes.forEach(b => b.classList.remove("ativo"));
-          botao.classList.add("ativo");
-
-          navLista.classList.remove("active");
+        menuToggle.addEventListener('click', function () {
+            navLista.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
-      });
 
-      // Mostra todas inicialmente
-      secoes.forEach(secao => secao.style.display = "block");
-    });
-  </script>
+        // Fechar menu ao clicar em um item
+        const navItems = document.querySelectorAll('.nav_item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function () {
+                navLista.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Registro do Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registrado com sucesso:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Falha ao registrar Service Worker:', error);
+                    });
+            });
+        }
+    </script>
 </body>
+
 </html>
